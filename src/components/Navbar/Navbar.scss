@@ -1,7 +1,5 @@
 .header {
-    background: #E9EDC9;
     padding: 15px 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -19,12 +17,13 @@ nav {
     .nav-link-right {
         display: flex;
         gap: 80px;
+        padding-right: 20px;
     }
 
     .nav-link {
         font-size: 25px;
         text-decoration: none;
-        color: black;
+        color: white;
         position: relative;
         display: inline-block;
 
@@ -36,7 +35,7 @@ nav {
             height: 3px;
             bottom: -5px; 
             left: 0;
-            background-color: black;
+            background-color: white;
             transform-origin: bottom right;
             transition: transform 0.15s ease-out; 
         }
@@ -49,6 +48,8 @@ nav {
     
     .nav-link.active
     {
+        color: rgb(119, 246, 255);
+        text-shadow: rgb(119, 246, 255) 0 0 10px;
         &:after {
             content: '';
             position: absolute;
@@ -57,7 +58,7 @@ nav {
             height: 3px;
             bottom: -5px; 
             left: 0;
-            background-color: black;
+            background-color: rgb(119, 246, 255);
         }
     }
 
@@ -80,5 +81,4 @@ nav {
             animation-delay: $delay-increment * $i;
         }
     }
-    
 }
