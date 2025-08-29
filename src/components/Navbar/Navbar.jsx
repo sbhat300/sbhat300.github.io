@@ -44,7 +44,17 @@ const Navbar = () => {
                     <NavLink
                     exact="true"
                     activeclassname="active"
-                    className="contact-link nav-link animate__animated animate__fadeInDown animate-slow animate__delay-3"
+                    className="experience-link nav-link animate__animated animate__fadeInDown animate-slow animate__delay-3"
+                    to="/experience">
+                        <span className="nav-text">Experience</span>
+                    </NavLink>
+                </span>
+
+                <span className="nav-link-hover">
+                    <NavLink
+                    exact="true"
+                    activeclassname="active"
+                    className="contact-link nav-link animate__animated animate__fadeInDown animate-slow animate__delay-4"
                     to="/contact">
                         <span className="nav-text">Contact</span>
                     </NavLink>

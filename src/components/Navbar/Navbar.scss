@@ -74,7 +74,7 @@ nav {
         --animate-duration: 2.0s;
     }
 
-    $delay-increment: 0.15s;
+    $delay-increment: 0.1s;
     $number-of-links: 4;
 
     @for $i from 1 through $number-of-links {

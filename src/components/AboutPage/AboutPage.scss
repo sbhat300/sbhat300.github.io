@@ -1,0 +1,43 @@
+.about-page-container{
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5%;
+  padding: 40px;
+
+  .about-paragraph {
+    font-size: clamp(23px, 3vh + .5px, 60px);;
+  }
+}
+
+.about-text {
+  text-align: center;
+  font-size: clamp(60px, 8vh, 100px);
+  font-weight: 700;
+}
+
+.about-page-alignment-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 70px;
+}
+
+.animate-fast {
+    --animate-duration: 0.7s;
+}
+
+$delay-increment: 0.1s;
+$number-of-links: 4;
+
+@for $i from 1 through $number-of-links {
+    .animate__delay-#{$i} {
+        animation-delay: $delay-increment * $i;
+    }
+}
