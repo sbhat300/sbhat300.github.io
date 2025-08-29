@@ -1,10 +1,11 @@
 import Navbar from '../Navbar/Navbar'
 import { Outlet } from 'react-router-dom'
 import AmbientCanvas from '../AmbientCanvas/AmbientCanvas';
+import './Layout.scss'
 
 const Layout = () => {
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+  <div className="layout-container" style={{ position: 'relative', overflow: 'hidden' }}>
       <AmbientCanvas />
       <Navbar />
 

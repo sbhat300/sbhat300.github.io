@@ -1,5 +1,6 @@
 .header {
     padding: 15px 20px;
+    padding-top: 25px;
 }
 
 nav {
@@ -48,8 +49,8 @@ nav {
     
     .nav-link.active
     {
-        color: rgb(119, 246, 255);
-        text-shadow: rgb(119, 246, 255) 0 0 10px;
+        color: var(--accent-color);
+        text-shadow: var(--accent-color) 0 0 10px;
         &:after {
             content: '';
             position: absolute;
@@ -58,7 +59,7 @@ nav {
             height: 3px;
             bottom: -5px; 
             left: 0;
-            background-color: rgb(119, 246, 255);
+            background-color: var(--accent-color);
         }
     }
 

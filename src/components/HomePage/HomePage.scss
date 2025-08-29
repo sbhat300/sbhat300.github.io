@@ -1,0 +1,49 @@
+.shreyas-picture-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    gap: 30px;
+}
+
+.shreyas-picture {
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+    max-width: 300px;
+    border: 7px solid white;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    font-size: 26px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.social-links a:hover svg {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+$delay-increment: 0.15s;
+$number-of-links: 4;
+
+@for $i from 1 through $number-of-links {
+    .animate__delay-#{$i} {
+        animation-delay: $delay-increment * $i;
+    }
+}
