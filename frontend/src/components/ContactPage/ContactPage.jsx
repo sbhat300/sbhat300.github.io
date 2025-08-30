@@ -10,6 +10,8 @@ const ContactPage = () => {
     email: '',
     message: ''
   });
+  // Toast state: { type: 'none' | 'sending' | 'success' | 'error', fadeOut: boolean }
+  const [toast, setToast] = useState({ type: 'none', fadeOut: false });
   const [isClicked, setIsClicked] = useState(false);
 
   const handleChange = (e) => {
@@ -20,24 +22,49 @@ const ContactPage = () => {
     }));
   };
 
-  const handleClick = (e) => {
-    setIsClicked(true); 
-    sendEmail(e);
-
-     setTimeout(() => {
-      setIsClicked(false);
-    }, 1000); 
-  }
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    console.log('Submitted Data:', formData);
+    setIsClicked(true);
+    setToast({ type: 'sending', fadeOut: false });
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      setToast({ type: 'sending', fadeOut: true });
+      setTimeout(() => {
+        setToast({ type: 'success', fadeOut: false });
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setToast({ type: 'success', fadeOut: true });
+          setTimeout(() => {
+            setToast({ type: 'none', fadeOut: false });
+            setIsClicked(false);
+          }, 500); 
+        }, 1500); 
+      }, 500); 
+    } catch (error) {
+      setToast({ type: 'sending', fadeOut: true });
+      setTimeout(() => {
+        setToast({ type: 'error', fadeOut: false });
+        setTimeout(() => {
+          setToast({ type: 'error', fadeOut: true });
+          setTimeout(() => {
+            setToast({ type: 'none', fadeOut: false });
+            setIsClicked(false);
+          }, 500);
+        }, 1500);
+      }, 500);
+      console.error('Error sending email:', error);
+    }
   };
 
   return (
@@ -49,9 +76,24 @@ const ContactPage = () => {
               <input className="contact-text-input" type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange}/>
               <input className="contact-text-input" type="text" name="email" placeholder="Email" value={formData.email} onChange={handleChange}/>
               <textarea className="contact-text-input contact-text-message" type="text" name = "message" placeholder="Message" value={formData.message} onChange={handleChange}/>
-            <button type="submit" className="contact-submit-button" onClick={handleClick} disabled={isClicked}>Send Message</button>
+            <button className="contact-submit-button" type="submit" disabled={isClicked}>Send Message</button>
           </div>
         </form>
+        {toast.type === 'sending' && (
+          <div className={`email-toast-notification email-toast-sending animate__animated animate__fast ${toast.fadeOut ? 'animate__fadeOut' : 'animate__fadeIn'}`}>
+            Email sending...
+          </div>
+        )}
+        {toast.type === 'success' && (
+          <div className={`email-toast-notification email-toast-success animate__animated animate__fast ${toast.fadeOut ? 'animate__fadeOut' : 'animate__fadeIn'}`}>
+            Email sent!
+          </div>
+        )}
+        {toast.type === 'error' && (
+          <div className={`email-toast-notification email-toast-error animate__animated animate__fast ${toast.fadeOut ? 'animate__fadeOut' : 'animate__fadeIn'}`}>
+            Error sending email
+          </div>
+        )}
       </div>
     </>
   )

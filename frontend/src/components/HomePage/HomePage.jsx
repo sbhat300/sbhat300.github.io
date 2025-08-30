@@ -18,7 +18,7 @@ const HomePage = () => {
         <span className="description animate__animated animate__zoomIn animate__delay-2">
           I'm a passionate computer science student interested in many fields.
           <br/>
-          I have experience with full-stack web development, graphics programming, machine learning, and physics simulations.
+          I have experience with full-stack development, graphics programming, ML, physics simulations, and game dev.
         </span>
 
         <div className="social-links animate__animated animate__zoomIn animate__delay-3">
