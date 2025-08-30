@@ -6,6 +6,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import ProjectsPage from './components/ProjectsPage/ProjectsPage';
 import ContactPage from './components/ContactPage/ContactPage';
 import ExperiencePage from './components/ExperiencePage/ExperiencePage';
+import './App.scss'
 
 function App() {
   return (

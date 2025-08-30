@@ -47,7 +47,7 @@ def send_email(email: EmailSchema) -> EmailResponse:
             ).model_dump()
         )
         
-    logger.info(f'Received email send request from {name} <{email_address}>: {message}')
+    logger.info(f'Received email send request from {name} <{email_address}>, Message: {message}')
     
     FROM_EMAIL = os.getenv('FROM_EMAIL')
     TO_EMAIL = os.getenv('TO_EMAIL')
