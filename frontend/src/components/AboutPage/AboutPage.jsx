@@ -17,7 +17,7 @@ const AboutPage = () => {
             better or learning new algorithms to improve the performance of my physics engine.
           </span>
           <span className="about-paragraph animate__animated animate__zoomIn animate-fast animate__delay-2">
-            I also know the limitations of working alone, and I embrace and enjoy working with a diverse group of people. Through multiple experiences, I've learned how to effectively communicate
+            I also know the limitations of working alone, and I enjoy working with a diverse group of people. Through multiple experiences, I've learned how to effectively communicate
             my ideas and work through conflicts. All of these experiences have shown me the importance of fostering a community where everyone feels supported.
           </span>
           <span className="about-paragraph animate__animated animate__zoomIn animate-fast animate__delay-3">
