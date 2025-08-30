@@ -1,6 +1,7 @@
 import React from 'react'
 import TimelineItem from './TimelineItem/TimelineItem'
 import "./ExperiencePage.scss"
+import "animate.css"
 
 const ExperiencePage = () => {
   const experiences = [
@@ -67,6 +68,7 @@ const ExperiencePage = () => {
             />
           ))}
         </div>
+        <div class="timeline-line animate__animated animate__fadeInUp animate__fast"></div>
       </div>
     </>
   )
