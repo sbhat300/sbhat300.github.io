@@ -1,0 +1,20 @@
+.projects-grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 0px;
+    transform: translateY(-20px);
+}
+
+.projects-page-alignment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.project-header {
+    margin-bottom: 50px;
+}
