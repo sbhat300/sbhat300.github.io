@@ -1,9 +1,22 @@
 .projects-grid {
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(1, 1fr); 
     gap: 40px 0px;
     transform: translateY(-20px);
+}
+
+
+@media (min-width: 800px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .projects-page-alignment-container {
