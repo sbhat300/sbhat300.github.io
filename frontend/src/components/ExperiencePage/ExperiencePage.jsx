@@ -68,7 +68,7 @@ const ExperiencePage = () => {
             />
           ))}
         </div>
-        <div class="timeline-line animate__animated animate__fadeInUp animate__fast"></div>
+        <div className="timeline-line animate__animated animate__fadeInUp animate__fast"></div>
       </div>
     </>
   )
