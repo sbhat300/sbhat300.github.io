@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["master"] # Or your default branch name
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -15,7 +15,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and the latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
@@ -31,13 +31,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json' # Point to your subdirectory's lock file
+      - name: Install dependencies
+        # IMPORTANT: Change 'frontend' to your subdirectory name
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build
+        # IMPORTANT: Change 'frontend' to your subdirectory name
+        working-directory: ./frontend
+        run: npm run build # Or your build command
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # IMPORTANT: Change this to your build output folder, inside your subdirectory
+          path: './frontend/build' # e.g., './app/build', './docs/_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
