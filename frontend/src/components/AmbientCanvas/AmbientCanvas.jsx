@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { createNoise3D } from 'simplex-noise';
+import './AmbientCanvas.scss'
 
 const AmbientCanvas = () => {
   const canvasRef = useRef(null);
@@ -131,18 +132,18 @@ const AmbientCanvas = () => {
 
     function render() {
       ctx.b.save();
-      ctx.b.filter = 'blur(50px)';
+      // ctx.b.filter = 'blur(50px)';
       ctx.b.drawImage(offCanvas, 0, 0);
       ctx.b.restore();
     }
 
     function draw() {
-      ctx.a.clearRect(0, 0, offCanvas.width, offCanvas.height);
-      ctx.a.fillStyle = backgroundColor; 
-      ctx.b.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.a.fillStyle = backgroundColor;
+      ctx.a.fillRect(0, 0, offCanvas.width, offCanvas.height);
       updateCircles();
       render();
-      animationFrameId = window.requestAnimationFrame(draw); // Next frame
+      animationFrameId = window.requestAnimationFrame(draw);
     }
 
     resize(); 
@@ -157,10 +158,12 @@ const AmbientCanvas = () => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
-    />
+    <div className='canvas-blur'>
+      <canvas
+        ref={canvasRef}
+        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}
+      />
+    </div>
   );
 };
 
