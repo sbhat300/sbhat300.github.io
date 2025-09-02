@@ -6,7 +6,6 @@ import os
 from dotenv import load_dotenv
 import smtplib
 from email.mime.text import MIMEText
-from magnum import Magnum
 
 load_dotenv()
 
@@ -14,7 +13,8 @@ app = FastAPI()
 logger = get_logger()
 
 origins = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://sbhat300.github.io/Portfolio-Site/'
 ]
 
 app.add_middleware(
@@ -79,5 +79,3 @@ def send_email(email: EmailSchema) -> EmailResponse:
         message='Email sent successfully',
         status=200
     )
-    
-handler = Mangum(app) 
