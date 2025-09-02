@@ -23,3 +23,13 @@
   justify-content: center;
   flex-grow: 1;
 }
+
+@media screen and (max-width: 1000px) {
+  .timeline-line {
+    left: 10%;
+  }
+
+  .timeline-container {
+    width: 100%;
+  }
+}

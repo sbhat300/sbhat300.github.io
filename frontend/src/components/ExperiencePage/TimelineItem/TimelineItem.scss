@@ -71,3 +71,27 @@
     scale: 103%;
   }
 }
+
+@media (max-width: 1000px) {
+  .timeline-item 
+  {
+    .timeline-dot {
+      left: 10%;
+    }
+
+    .left-align-connector {
+      left: 50%;
+    }
+
+    .timeline-connector {
+      left: 10%;
+      width: 50%;
+    }
+  }
+
+  .timeline-content {
+    margin-left: auto;
+    width: 60%;
+    margin-right: 10px;
+  }
+}

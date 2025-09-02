@@ -24,7 +24,7 @@ const ProjectModal = ({isOpen, onClose, title, video, description}) => {
           <button className="modal-close-btn" onClick={onClose}>
             &times;
           </button>
-          <div>
+          <div className="modal-header">
             <h1>{title}</h1>
             <iframe src={video} title="PreviewVideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
