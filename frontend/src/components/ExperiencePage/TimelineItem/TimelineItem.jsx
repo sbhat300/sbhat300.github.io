@@ -19,7 +19,7 @@ const TimelineItem = ({title, start, end, company, description, even}) => {
     <>
       <motion.div 
         className="timeline-item"
-        initial={{ opacity: 0, x: (even || isNarrowScreen) ? 100 : -100  }}
+        initial={{ opacity: 0, x: (even || isNarrowScreen) ? 100 : -100 }}
         whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2, duration: 0.5}}}
         viewport={{ once: false, amount: .3}}
       >
