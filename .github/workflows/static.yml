@@ -44,7 +44,7 @@ jobs:
       - name: Build
         # IMPORTANT: Change 'frontend' to your subdirectory name
         working-directory: ./frontend
-        run: npm run build # Or your build command
+        run: CI=false npm run build # Or your build command
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
