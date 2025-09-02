@@ -5,14 +5,14 @@ import './AmbientCanvas.scss'
 const AmbientCanvas = () => {
   const canvasRef = useRef(null);
 
-  const circleCount = 150; 
+  const circleCount = 100; 
   const circlePropCount = 8; 
   const circlePropsLength = circleCount * circlePropCount;
   const baseSpeed = 0.001;
   const rangeSpeed = 0.001; 
   const baseTTL = 200; 
   const rangeTTL = 250; 
-  const baseRadius = 100; 
+  const baseRadius = 120; 
   const rangeRadius = 200; 
   const rangeHue = 60; 
   const xOff = 0.0015, yOff = 0.0015, zOff = 0.0015; 
