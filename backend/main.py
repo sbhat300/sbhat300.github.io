@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 import smtplib
 from email.mime.text import MIMEText
+from magnum import Magnum
 
 load_dotenv()
 
@@ -78,3 +79,5 @@ def send_email(email: EmailSchema) -> EmailResponse:
         message='Email sent successfully',
         status=200
     )
+    
+handler = Mangum(app) 
