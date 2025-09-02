@@ -1,0 +1,14 @@
+# 1. Settings for your Python backend function
+# Netlify will automatically detect and build the function in this directory.
+# No explicit build command is needed for the backend itself, as long
+# as you have a requirements.txt file inside.
+[functions]
+  directory = "backend"
+
+# 2. Rewrite rule to make the backend accessible via /api/
+# This makes your FastAPI app available at https://your-site.netlify.app/api/
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/main" # 'main' corresponds to 'main.py'
+  status = 200
+
