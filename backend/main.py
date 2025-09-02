@@ -14,7 +14,7 @@ logger = get_logger()
 
 origins = [
     'http://localhost:3000',
-    'https://sbhat300.github.io/Portfolio-Site/'
+    'https://sbhat300.github.io'
 ]
 
 app.add_middleware(
