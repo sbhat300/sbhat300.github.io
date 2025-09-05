@@ -52,7 +52,7 @@
   color: white;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .modal-content {
     flex-direction: column;
     
@@ -64,4 +64,13 @@
     width: 30vh;
     height: 25vh;
   }
+}
+
+.modal-contents a:hover svg {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+.modal-contents a svg {
+  margin-top: 10px;  
 }
