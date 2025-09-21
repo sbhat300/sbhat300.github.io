@@ -49,11 +49,13 @@
     resize: vertical;
     height: clamp(150px, 20vh + 0.5px, 250px);
     font-family: inherit; 
-    
+    -ms-overflow-style: initial;
+    scrollbar-width: initial;
 }
 
-::-webkit-scrollbar {
+.contact-text-message::-webkit-scrollbar {
   width: 8px;
+  display: initial;
 }
 
 ::-webkit-scrollbar-track {

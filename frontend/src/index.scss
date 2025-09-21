@@ -8,8 +8,14 @@ body {
   color:white;
   text-decoration: none;
   background: rgb(0, 0, 0) !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 :root {
   --accent-color: rgb(119, 246, 255);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
