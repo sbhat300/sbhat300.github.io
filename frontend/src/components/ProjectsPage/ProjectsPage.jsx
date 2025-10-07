@@ -6,6 +6,7 @@ import PresentPickerThumbnail from '../../assets/images/thumbnails/present-picke
 import LLMThumbnail from '../../assets/images/thumbnails/llm.png'
 import EmailSenderThumbnail from '../../assets/images/thumbnails/email-sender.png'
 import JOTR2Thumbnail from '../../assets/images/thumbnails/jotr2.png'
+import SpeakAbleThumbnail from '../../assets/images/thumbnails/speakable.jpg'
 import ProjectCard from './ProjectCard/ProjectCard'
 import ProjectModal from './ProjectModal/ProjectModal'
 import './ProjectsPage.scss'
@@ -81,6 +82,16 @@ const ProjectsPage = () => {
     "It also uses IMAP to read emails, and you can send emails to it to remind you about things the next morning or use commands to add things like " +
     "birthdays. It also webscrapes with the requests library to get weather data.",
     github: "https://github.com/sbhat300/EmailerBot"
+  },
+  {
+    thumbnail: SpeakAbleThumbnail,
+    title: "SpeakAble",
+    description: "An AI tool to help bridge language barriers",
+    video: "https://www.youtube.com/embed/QCKObLf51Zs",
+    extendedDescription: "SpeakAble overcomes speech/language barriers by automatically translating and voicing short phrases, ensuring everyone " +
+    "is respected and heard. It uses Gemini to enhance input text, and uses ElevenLabs for speech to text and text to speech. It supports " +
+    "multiple languages through text and spech to text. Previous chat histories are also stored and viewable.",
+    github: "https://github.com/sbhat300/SpeakAble"
   }];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
