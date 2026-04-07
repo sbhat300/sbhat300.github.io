@@ -75,7 +75,7 @@ nav {
     }
 
     $delay-increment: 0.1s;
-    $number-of-links: 4;
+    $number-of-links: 10;
 
     @for $i from 1 through $number-of-links {
         .animate__delay-#{$i} {
@@ -84,7 +84,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .header {
     display: none;
   }

@@ -54,6 +54,15 @@
   color: white;
 }
 
+$delay-increment: 0.1s;
+$number-of-links: 10;
+
+@for $i from 1 through $number-of-links {
+    .animate__delay-#{$i} {
+        animation-delay: $delay-increment * $i;
+    }
+}
+
 @media screen and (max-width: 1000px) {
   .vertical-navbar-container {
     display: flex;
