@@ -6,6 +6,17 @@ import "animate.css"
 const ExperiencePage = () => {
   const experiences = [
     {
+      title: "Payload Software Lead",
+      start: "Jan 2026",
+      end: "Present",
+      company: "Rutgers-New Brunswick",
+      description: [
+        "Leading payload software development for a University Nanosatellite Program (UNP) mission",
+        "Developing and optimizing flight software in C and Python to interface with Blue Canyon Technologies XACT-DCE flight electronics, Raspberry Pis, Bota Systems sensors, and other electronics",
+        "Wrote scripts to facilitate interprocess communication and handle a custom networking protocol to allow for communication between current active scripts and the onboard computers on the satellite"
+      ]
+    },
+    {
       title: "Software Engineering Intern",
       start: "Jul 2025",
       end: "Aug 2025",
@@ -22,11 +33,11 @@ const ExperiencePage = () => {
     {
       title: "Undergraduate Researcher",
       start: "Jan 2025",
-      end: "Present",
+      end: "Jul 2025",
       company: "Rutgers-New Brunswick",
       description: [
-        "Using machine learning to determine what real snowflakes shapes can be predicted through a non-fourier diffusion algorithm",
-        "Using Python with the Taichi framework to compute gradients and analyze the loss between predicted and actual snowflakes to learn about its parameters",
+        "Used machine learning to determine what real snowflakes shapes can be predicted through a non-fourier diffusion algorithm",
+        "Used Python with the Taichi framework to compute gradients and analyze the loss between predicted and actual snowflakes to learn about its parameters",
         "Learned about loss functions, optimization algorithms, and differentiable physics methods such as checkpointing"
       ]
     },
