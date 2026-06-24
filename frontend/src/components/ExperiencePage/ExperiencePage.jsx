@@ -6,6 +6,18 @@ import "animate.css"
 const ExperiencePage = () => {
   const experiences = [
     {
+      title: "Logistics Analytics Intern (Optimization and Automation)",
+      start: "Apr 2026",
+      end: "Present",
+      company: "Colgate-Palmolive",
+      description: [
+        "Developing algorithmic optimization models and automating data pipelines to drive logistics efficiency and minimize operational overhead",
+        "Engineered optimization models in Python, formulating and solving Mixed-Integer Linear Programming problems and implementing simulated annealing to minimize truck fleet size and reduce transit costs",
+        "Automated workflows and routine data uploads using Python",
+        "Built and managed data pipelines using Python, SQL, and Snowflake to extract, transform, and store large-scale datasets used for modeling"
+      ]
+    },
+    {
       title: "Payload Software Lead",
       start: "Jan 2026",
       end: "Present",
