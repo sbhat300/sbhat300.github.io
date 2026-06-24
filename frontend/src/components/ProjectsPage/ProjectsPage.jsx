@@ -7,12 +7,24 @@ import LLMThumbnail from '../../assets/images/thumbnails/llm.png'
 import EmailSenderThumbnail from '../../assets/images/thumbnails/email-sender.png'
 import JOTR2Thumbnail from '../../assets/images/thumbnails/jotr2.png'
 import SpeakAbleThumbnail from '../../assets/images/thumbnails/speakable.jpg'
+import LunarLanderThumbnail from '../../assets/images/thumbnails/lunar-lander.png'
 import ProjectCard from './ProjectCard/ProjectCard'
 import ProjectModal from './ProjectModal/ProjectModal'
 import './ProjectsPage.scss'
 
 const ProjectsPage = () => {
   const projects = [{
+    thumbnail: LunarLanderThumbnail,
+    title: "NEAT",
+    description: "AI learns to play various games with NEAT",
+    video: "https://www.youtube.com/embed/J46XAmjFEm8",
+    extendedDescription: "Implemented the NEAT (Neuroevolution of Augmenting Topologies) algorithm from scratch in C++, using only standard libraries. " + 
+    "Implemented features including speciation and crossover while also using a topolgical sort to create the genome phenotypes. " + 
+    "Then, trained an AI to play games developed in my custom game engine, such as Flappy Bird and Lunar Lander. The source code for each game can also be found " +
+    "on my GitHub.",
+    github: "https://github.com/sbhat300/NEAT-Cpp"
+  }, 
+  {
     thumbnail: RenderingThumbnail,
     title: "Rendering Engine",
     description: "3D rendering engine from scratch in C++ with OpenGL",
