@@ -14,7 +14,8 @@ const ExperiencePage = () => {
         "Developing algorithmic optimization models and automating data pipelines to drive logistics efficiency and minimize operational overhead",
         "Engineered optimization models in Python, formulating and solving Mixed-Integer Linear Programming problems and implementing simulated annealing to minimize truck fleet size and reduce transit costs",
         "Automated workflows and routine data uploads using Python",
-        "Built and managed data pipelines using Python, SQL, and Snowflake to extract, transform, and store large-scale datasets used for modeling"
+        "Built and managed data pipelines using Python, SQL, and Snowflake to extract, transform, and store large-scale datasets used for modeling",
+        "Created sites using React with a FastAPI backend for seamless execution of algorithmic tasks"
       ]
     },
     {
