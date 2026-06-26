@@ -5,6 +5,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import ProjectsPage from './components/ProjectsPage/ProjectsPage';
 import ContactPage from './components/ContactPage/ContactPage';
 import ExperiencePage from './components/ExperiencePage/ExperiencePage';
+import EducationPage from './components/EducationPage/EducationPage';
 import './App.scss'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="about" element={<AboutPage/>}/>
           <Route path="projects" element={<ProjectsPage/>}/>
           <Route path="experience" element={<ExperiencePage/>}/>
+          <Route path="education" element={<EducationPage/>}/>
           <Route path="contact" element={<ContactPage/>}/>
         </Route>
       </Routes>

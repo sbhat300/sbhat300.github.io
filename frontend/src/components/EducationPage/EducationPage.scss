@@ -1,0 +1,45 @@
+.education-page-container {
+    display: flex;
+    justify-content: center;
+    min-height: 85vh;
+    padding-bottom: 40px;
+}
+
+.rutgers-card {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: fit-content;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px 20px;
+  margin-top: 40px;
+  border-radius: 3vh;
+
+  font-size: clamp(13px, 2.2vh + 0.4px, 23px);
+
+  transition: scale 0.2s;
+  &:hover {
+    scale: 103%;
+  }
+
+  .rutgers-picture {
+    width: 100%;
+    aspect-ratio: 4.6 / 1; 
+    object-fit: cover;
+    object-position: center 55%;
+
+  }
+}
+
+$delay-increment: 0.1s;
+$number-of-text: 10;
+
+@for $i from 1 through $number-of-text {
+    .animate__delay-#{$i} {
+        animation-delay: $delay-increment * $i;
+    }
+}

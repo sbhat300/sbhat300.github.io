@@ -18,6 +18,10 @@ const Navbar = () => {
       link: "/experience"
     },
     {
+      title: "Education",
+      link: "/education"
+    },
+    {
       title: "Contact",
       link: "/contact"
     }
